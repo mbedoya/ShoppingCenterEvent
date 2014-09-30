@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+        <title>Shopping Center Event</title>
+    </head>
+    <body>
+
+    <!-- START -->
+    <div data-role="page" id="page-start" data-theme="a" >
+
+        <div id="header" data-role="header">
+            <h3>Evento Centro Comercial</h3>
+        </div><!-- /header -->
+
+        <div data-role="content"  >
+            <div id="breadcrumb"></div>
+
+            <p>Bienvenido al evento XXX para el Centro Comercial</p>
+            <p>Para comenzar inicia sesión, de esta manera podremos saber quien eres</p>
+
+            <a id="FBConnect"><img src="img/FB-Connect.jpg"></a>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" >
+            <h1> Todos los derechos reservados</h1>
+        </div> <!-- /footer -->
+
+    </div><!-- /start -->
+
+    <!-- WELCOME -->
+    <div data-role="page" id="page-welcome" data-theme="a" >
+
+        <div id="header" data-role="header">
+            <h3>Evento Centro Comercial</h3>
+        </div><!-- /header -->
+
+        <div data-role="content"  >
+            <div id="breadcrumb"></div>
+
+            <p>Hola <b><span id="fullname"></span></b> en <i><span id="address"></span></i></p>
+            <p>Estás listo para la aventura? Busca el <i>Código QR</i> que te dará la partida</p>
+
+            <input id="getCodeButton" type="button" value="Escanear Código" >
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" >
+            <h1> Todos los derechos reservados</h1>
+        </div> <!-- /footer -->
+
+    </div><!-- /welcome -->
+
+    <!-- FIRST CLUE -->
+    <div data-role="page" id="page-firstclue" data-theme="a" >
+
+        <div id="header" data-role="header">
+            <h3>Evento Centro Comercial</h3>
+        </div><!-- /header -->
+
+        <div data-role="content"  >
+            <div id="breadcrumb"></div>
+
+            <p><b><span id="fullname"></span></b></p>
+            <p>Acá está tu primera pista:</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+
+            <p>Encuentra el código QR de este lugar y escanealo</p>
+
+            <input id="getFirtClueCodeButton" type="button" value="Escanear Código" >
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false" >
+            <h1> Todos los derechos reservados</h1>
+        </div> <!-- /footer -->
+
+    </div><!-- /firstclue -->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/mobile/app.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.2.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        var controller = new index_js();
+        controller.start();
+    </script>
+    <script type="text/javascript" src="js/openfb.js"></script>
+    <script type="text/javascript" src="Camera.js"></script>
+    <script type="text/javascript" src="geolocation.js"></script>
+    <script src="barcodescanner.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAxN9T9lds0Mshr2CtUFLZxg498EOMoPj8">
+    </script>
+
+    </body>
+</html>
